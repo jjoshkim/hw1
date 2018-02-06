@@ -24,5 +24,12 @@ let weatherData = {
   ]
 }
 
-console.log("Currently it is " + weatherData.current.temperature + " degrees and " + weatherData.current.conditions + ". Tomorrow it will be " + weatherData.forecast[0].temperature + " and " + weatherData.forecast[0].conditions +".");
-console.log("The next day we will see " + weatherData.forecast[1].conditions + " skies, with a temperature of " + weatherData.forecast[1].temperature + ".");
+let currentTemperature = weatherData.current.temperature;
+let currentConditions = weatherData.current.conditions.toLowerCase();
+let tomorrowTemperature = weatherData.forecast[0].temperature;
+let tomorrowConditions = weatherData.forecast[0].conditions;
+let nextTemperature = weatherData.forecast[1].temperature;
+let nextConditions = weatherData.forecast[1].conditions;
+
+console.log("Currently it is " + currentTemperature + " degrees and " + currentConditions + ". Tomorrow it will be " + tomorrowTemperature + " and " + tomorrowConditions +".");
+console.log("The next day we will see " + nextConditions + " skies, with a temperature of " + nextTemperature + ".");
